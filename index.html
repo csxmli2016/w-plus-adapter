@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="W+ Adapter">
+  <meta name="keywords" content="StyleGAN, W+, Stable Diffusion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>W+ adapter</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5ZVQZ7NHC"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js_slide/fontawesome.all.min.js"></script>
+  <script src="./static/js_slide/bulma-carousel.min.js"></script>
+  <script src="./static/js_slide/bulma-slider.min.js"></script>
+  <script src="./static/js_slide/index.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- Vendor Stylesheets -->
+  <!--=================js==========================-->
+  <link rel="stylesheet" href="./static/css/tab_gallery.css">
+  <link rel="stylesheet" href="./static/css/juxtapose.css">
+  <link rel="stylesheet" href="./static/css/image_card_fader.css">
+  <link rel="stylesheet" href="./static/css/image_card_slider.css">
+  <style>
+    .mathcal {
+      font-family: cursive;
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">When StyleGAN Meets Stable Diffusion: <br> a <span class="mathcal">W</span><sub>+</sub> Adapter for Personalized Image Generation </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://csxmli2016.github.io/">Xiaoming Li</a><sup></sup>,</span>
+            <span class="author-block">
+              <a href="https://itsmag11.github.io/">Yuxin Hou</a><sup></sup>,</span>
+            <span class="author-block">
+              <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a><sup></sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">S-Lab, Nanyang Technological University
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+  
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                &nbsp; &nbsp;
+              </span>  
+              <span class="link-block">
+                <a href="https://github.com/csxmli2016/w-plus-adapter"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>  
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--=================Figure 1==========================-->
+<section class="section" style="margin-top:-120px;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <div class="publication-img">
+              <img id="architecture" src="./figures/fig1.png" style="margin-top:10px;margin-bottom:10px;"/>
+            </div>
+          </div>
+        </div>
+        <p>
+          Given a single reference image (thumbnail in the top left), our <span class="mathcal">W</span><sub>+</sub> adapter not only integrates the identity into the text-to-image generation accurately but also enables modifications of facial attributes along the &Delta;<span class="mathcal">w</span> trajectory derived from StyleGAN. The text prompt is ``a woman wearing a spacesuit in a forest''.
+        </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!--=================Abstract==========================-->
+<section class="section" style="margin-top:-120px;">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-to-image diffusion models have remarkably excelled in producing diverse, high-quality, and photo-realistic images. This advancement has spurred a growing interest in incorporating specific identities into generated content. Most current methods employ an inversion approach to embed a target visual concept into the text embedding space using a single reference image. However, the newly synthesized faces either closely resemble the reference image in terms of facial attributes, such as expression, or exhibit a reduced capacity for identity preservation. Text descriptions intended to guide the facial attributes of the synthesized face may fall short, owing to the intricate entanglement of identity information with identity-irrelevant facial attributes derived from the reference image. To address these issues, we present the novel use of the extended StyleGAN embedding space <span class="mathcal">W</span><sub>+</sub>, to achieve enhanced identity preservation and disentanglement for diffusion models. By aligning this semantically meaningful human face latent space with text-to-image diffusion models, we succeed in maintaining high fidelity in identity preservation, coupled with the capacity for semantic editing. Additionally, we propose new training objectives to balance the influences of both prompt and identity conditions, ensuring that the identity-irrelevant background remains unaffected during facial attribute modifications. Extensive experiments reveal that our method adeptly generates personalized text-to-image outputs that are not only compatible with prompt descriptions but also amenable to common StyleGAN editing directions in diverse settings.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--=================paper pipeline==========================-->
+<section class="section" style="margin-top:-120px;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="section-title has-text-centered" >
+          <h2 class="title is-3 is-centered"><span class="mathcal">W</span><sub>+</sub> Adapter Framework</h2>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <div class="publication-img">
+              <img id="architecture" src="./figures/pipeline.png" style="margin-top:10px;margin-bottom:10px;"/>
+            </div>
+          </div>
+        </div>
+        <p>
+          Our approach is capable of generating images that preserve identity while allowing for semantic edits, requiring just a single reference image for inference. This capability is realized by innovatively aligning StyleGAN's <span class="mathcal">W</span><sub>+</sub> latent space with the diffusion model. The training of our <span class="mathcal">W</span><sub>+</sub> adapter is divided into two stages. In Stage I, we establish a mapping from <span class="mathcal">W</span><sub>+</sub> to SD latent space, using the resulting projection as an additional identity condition to synthesize center-aligned facial images of a specified identity. In Stage II, this personalized generation process is expanded to accommodate more dynamic, "in-the-wild" settings, ensuring adaptability to a variety of textual prompts.
+        </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Aba -->
+<section class="section" style="background-color: #f1f1f1;">
+  <div class="container  style="margin-top:30px;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Comparison of Face Attributes Editing Using Ours (Stage I) and e4e</h2>
+        <div class="content has-text-justified">
+          <div style="text-align: center; vertical-align:middle">
+            <img src="figures/aba_stage1.png" width="800">
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+
+<section class="section">
+  <div class="container  style="margin-top:30px;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><span class="mathcal">w</span><sub>+</sub> Embeddings Interpolation from Two Real-world References</h2>
+        <div class="content has-text-justified">
+          <div style="text-align: center; vertical-align:middle">
+            <img src="figures/aba_w_interpolation.png" width="1000">
+          </div>
+          <h3 class="title is-6">The prompts are “one person wearing suit and tie in a garden” and “one person wearing a blue shirt by a secluded waterfall”</h3>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+
+<section class="section" style="background-color: #f1f1f1;">
+  <div class="container  style="margin-top:30px;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Visual Comparison with Previous Methods</h2>
+        <div class="content has-text-justified">
+          <div style="text-align: center; vertical-align:middle">
+            <img src="figures/vis_compare.png" width="1000">
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+
+  
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{li2023w-plus-adapter,
+  author    = {Li, Xiaoming and Hou, Xinyu and Loy, Chen Change},
+  title     = {When StyleGAN Meets Stable Diffusion: a <span class="mathcal">W</span><sub>+</sub> Adapter for Personalized Image Generation},
+  journal   = {arXiv preprint arXiv:},
+  year      = {2023},
+}</code></pre>
+  </div>
+</section>
+
+  
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
+
+
