@@ -27,7 +27,7 @@
 This project is licensed under <a rel="license" href="https://github.com/csxmli2016/w-plus-adapter/blob/main/LICENSE">NTU S-Lab License 1.0</a>. Redistribution and use should follow this license.
 
 ## Acknowledgement
-This project is built based on the excellent [IP-Adapter](https://github.com/tencent-ailab/IP-Adapter) and [FreeU](https://github.com/ChenyangSi/FreeU).
+This project is built based on the excellent [IP-Adapter](https://github.com/tencent-ailab/IP-Adapter).
 
 
 ## Citation
