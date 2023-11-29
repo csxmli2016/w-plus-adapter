@@ -25,7 +25,7 @@ S-Lab, Nanyang Technological University
 
 ## $w_+$ Interpolation
 <img src="./figures/aba_w_interpolation.png" width="800px">
-<p align="justify">Visual results of w+ embeddings interpolation during inference. The prompts are “one person wearing suit and tie in a garden” and “one person wearing a blue shirt by a secluded waterfall”, respectively</p>
+<p align="justify">Visual results of w+ embeddings interpolation from two real-world references. The prompts are “one person wearing suit and tie in a garden” and “one person wearing a blue shirt by a secluded waterfall”, respectively</p>
 
 
 ## Visual Comparison
