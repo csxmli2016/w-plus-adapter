@@ -8,7 +8,7 @@
     <sup></sup>S-Lab, Nanyang Technological University
 </div>
 
-[Paper](#) | [Project Page](https://csxmli2016.github.io/projects/w-plus-adapter/)
+[Paper](https://arxiv.org/pdf/2311.17461.pdf) | [Project Page](https://csxmli2016.github.io/projects/w-plus-adapter/)
 
 <p><B>We propose a</B> $\mathcal{W}_+$ <B>adapter, a method that aligns the face latent space </B> $\mathcal{W}_+$ <B> of StyleGAN with text-to-image diffusion models, achieving high fidelity in identity preservation and semantic editing.</B></p>
 
