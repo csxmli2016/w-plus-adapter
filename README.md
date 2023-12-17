@@ -128,10 +128,10 @@ You can convert the pytorch_model.bin to wplus_adapter.bin by running:
 python script/transfer_pytorchmodel_to_wplus.py
 ```
 
-<details>
-<summary>Failure Case Analyses</summary>
+
+## Failure Case Analyses
 Since our $\mathcal{W}_+$ adapter affects the results by using the format of residual cross-attention, the final performance relies on the original results of stable diffusion. If the original result is not good, you can manually adjust the prompt or seed to get a better result.
-</details>
+
 
 
 
