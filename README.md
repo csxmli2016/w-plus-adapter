@@ -36,7 +36,7 @@ BASICSR_EXT=True pip install basicsr
 
 ## Inference
 ### Step 0: download the weights
-> If you encounter errors about StyleGAN that are not easy to solve, you can create a new environment and use a lower torch version, e.g., 1.12.1+cu113
+> If you encounter errors about StyleGAN that are not easy to solve, you can create a new environment and use a lower torch version, e.g., 1.12.1+cu113. You can refer to installation of our [MARCONet](https://github.com/csxmli2016/MARCONet?tab=readme-ov-file#getting-start)
 
 ```
 python script/download_weights.py
