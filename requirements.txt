@@ -3,3 +3,4 @@ transformers==4.34.0
 accelerate==0.23.0
 dlib==19.20.0
 matplotlib
+ninja
