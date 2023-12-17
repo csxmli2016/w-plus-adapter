@@ -52,14 +52,13 @@ class MyDataset(torch.utils.data.Dataset):
         self.caption = []
         self.wild_mask = []
 
-        imgs_path = '/mnt/lustre/xmli/TrainData/Face/FFHQ512_LANCZOS' #'./Face/FFHQ512'
-        noise_path = '/mnt/lustre/xmli/TrainData/Face/FFHQ-e4e-w-plus' #'./Face/FFHQ512_e4e_nobg_w_plus'
-        wilds_path = '/mnt/lustre/xmli/TrainData/Face/FFHQ-in-the-wild/in-the-wild-min-512/in-the-wild-min-512' #'./Face/FFHQ-in-the-wild/in-the-wild-min-512'
-        wilds_face_path = '/mnt/lustre/xmli/TrainData/Face/FFHQ-in-the-wild/in-the-wild-min-512/in-the-wild-min-512-face-mask' #'./Face/FFHQ-in-the-wild/in-the-wild-min-512-face-mask'
-        captions_path = '/mnt/lustre/xmli/TrainData/Face/FFHQ-in-the-wild/in-the-wild-min-512/captions_blip2' #'./Face/FFHQ-in-the-wild/captions_blip2'
+        imgs_path = './Face/FFHQ512'
+        noise_path = './Face/FFHQ512_e4e_nobg_w_plus'
+        wilds_path = './Face/FFHQ-in-the-wild/in-the-wild-min-512'
+        wilds_face_path = './Face/FFHQ-in-the-wild/in-the-wild-min-512-face-mask'
+        captions_path = './Face/FFHQ-in-the-wild/captions_blip2'
 
-        # f = open('./Face/ffhq_wild_names_with_caption.txt', 'r')
-        f = open('/mnt/lustre/xmli/4_Id/DisId/training_data/ffhq_wild_caption.txt', 'r')
+        f = open('./Face/ffhq_wild_names_with_caption.txt', 'r')
         lines = f.readlines()
         for l in lines:
             if len(l) > 0:
@@ -78,15 +77,14 @@ class MyDataset(torch.utils.data.Dataset):
         self.caption_shhq = []
         self.wild_mask_shhq = []
 
-        imgs_path_shhq = '/mnt/lustre/xmli/TrainData/Face/SHHQ/face_images' #'./Face/SHHQ/face_images' 
-        noise_path_shhq = '/mnt/lustre/xmli/TrainData/Face/SHHQ/w_plus_nobg' #'./Face/SHHQ/face_e4e_nobg_w_plus'
-        masks_path_shhq = '/mnt/lustre/xmli/TrainData/Face/SHHQ/face_parsing/FineMask' #'./Face/SHHQ/face_mask'
-        wilds_path_shhq = '/mnt/lustre/xmli/TrainData/Face/SHHQ/wild_images_2048_1024' #'./Face/SHHQ/wild_images_2048_1024'
-        wilds_face_path_shhq = '/mnt/lustre/xmli/TrainData/Face/SHHQ/wild_images_face_region_mask_2048_1024' #'./Face/SHHQ/wild_images_face_region_mask_2048_1024'
-        captions_path_shhq = '/mnt/lustre/xmli/TrainData/Face/SHHQ/wild_captions' #'./Face/SHHQ/wild_captions'
+        imgs_path_shhq = './Face/SHHQ/face_images' 
+        noise_path_shhq = './Face/SHHQ/face_e4e_nobg_w_plus'
+        masks_path_shhq = './Face/SHHQ/face_mask'
+        wilds_path_shhq = './Face/SHHQ/wild_images_2048_1024'
+        wilds_face_path_shhq = './Face/SHHQ/wild_images_face_region_mask_2048_1024'
+        captions_path_shhq = './Face/SHHQ/wild_captions'
 
-        # f = open('./Face/shhq_wild_caption.txt', 'r')
-        f = open('/mnt/lustre/xmli/4_Id/DisId/training_data/shhq_wild_caption.txt', 'r')
+        f = open('./Face/shhq_wild_caption.txt', 'r')
         lines = f.readlines()
         for l in lines:
             if len(l) > 0:
