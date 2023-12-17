@@ -114,7 +114,6 @@ if __name__ == '__main__':
                 out_path = os.path.join(save_path_step1, out_name)  
 
                 img, length = align_face(in_path, lm)
-                print(length)
                 if length > args.min_size:
                     img.save(out_path)
                 else:
