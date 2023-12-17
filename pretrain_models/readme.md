@@ -1,0 +1,1 @@
+## download the pre-trained w_plus_adapter from https://github.com/csxmli2016/w-plus-adapter/releases/download/v1/wplus_adapter.bin
