@@ -34,7 +34,7 @@ BASICSR_EXT=True pip install basicsr
 ```
 
 
-## Inference
+## Inference for in-the-wild Images (Stage 2)
 ### Step 0: download the weights
 > If you encounter errors about StyleGAN that are not easy to solve, you can create a new environment and use a lower torch version, e.g., 1.12.1+cu113. You can refer to installation of our [MARCONet](https://github.com/csxmli2016/MARCONet?tab=readme-ov-file#getting-start)
 
@@ -59,8 +59,8 @@ CUDA_VISIBLE_DEVICES=0 python ./script/ProcessWildImage.py -i ./test_data/aligne
 # Parameters:
 -i: input path
 -o: save path
--n: need alignment like FFHQ. This is for in the wild images.
--s: blind super-resolution using PSFRGAN. This is for low quality face images
+-n: need alignment like FFHQ. This is for in-the-wild images.
+-s: blind super-resolution using PSFRGAN. This is for low-quality face images
 ```
 
 ### Step 2: Stable Diffusion Generation Using Our $\mathcal{W}_+$ Adapter.
@@ -69,7 +69,7 @@ CUDA_VISIBLE_DEVICES=0 python ./script/ProcessWildImage.py -i ./test_data/aligne
 - You can control the parameter of ```residual_att_scale``` to balance the identity preservation and text alignment.
 
 
-## Attributes Editing Examples:
+### Attributes Editing Examples (Stage 2):
 ```
 - Prompt: 'a woman wearing a red shirt in a garden'
 - Seed: 23
@@ -95,6 +95,15 @@ CUDA_VISIBLE_DEVICES=0 python ./script/ProcessWildImage.py -i ./test_data/aligne
 > ControlNet using ```control_v11p_sd15_openpose```
 
 <img src="./figures/controlnet.png" width="800px">
+
+
+## Inference for Face Images (Stage 1)
+See ```test_demo_stage1.ipynb```
+
+### Attributes Editing Examples (Stage 1):
+> Face Image Inversion and Editing
+<img src="./figures/stage1.png" width="800px">
+
 
 
 
