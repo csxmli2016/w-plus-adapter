@@ -69,7 +69,7 @@ CUDA_VISIBLE_DEVICES=0 python ./script/ProcessWildImage.py -i ./test_data/aligne
 - You can control the parameter of ```residual_att_scale``` to balance the identity preservation and text alignment.
 
 
-### Attributes Editing Examples (Stage 2):
+## Attributes Editing Examples (Stage 2):
 ```
 - Prompt: 'a woman wearing a red shirt in a garden'
 - Seed: 23
@@ -100,7 +100,7 @@ CUDA_VISIBLE_DEVICES=0 python ./script/ProcessWildImage.py -i ./test_data/aligne
 ## Inference for Face Images (Stage 1)
 See ```test_demo_stage1.ipynb```
 
-### Attributes Editing Examples (Stage 1):
+## Attributes Editing Examples (Stage 1):
 > Face Image Inversion and Editing
 <img src="./figures/stage1.png" width="800px">
 
