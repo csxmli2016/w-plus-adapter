@@ -21,6 +21,7 @@
 ## TODO
 - [x] Release the source code and model.
 - [x] Extend to more diffusion models.
+- [x] Using Delayed Subject Conditioning from FastComposer.
 
 
 ## Installation
@@ -160,8 +161,8 @@ This project is built based on the excellent [IP-Adapter](https://github.com/ten
 @article{li2023w-plus-adapter,
 author = {Li, Xiaoming and Hou, Xinyu and Loy, Chen Change},
 title = {When StyleGAN Meets Stable Diffusion: a $\mathcal{W}_+$ Adapter for Personalized Image Generation},
-journal = {arXiv preprint arXiv: 2311.17461},
-year = {2023}
+journal = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+year = {2024}
 }
 ```
 
