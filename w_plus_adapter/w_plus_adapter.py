@@ -116,6 +116,7 @@ class WPlusAdapter:
         guidance_scale=7.5,
         num_inference_steps=30,
         use_freeu=False,
+        start_embed_step_ratio=20,
         **kwargs,
     ):
         self.set_scale(scale)
@@ -148,6 +149,11 @@ class WPlusAdapter:
             
         generator = torch.Generator(self.device).manual_seed(seed) if seed is not None else None
 
+        start_embed_step = int(float(start_embed_step_ratio) / 100 * num_inference_steps)
+        if start_embed_step > 30:
+            start_embed_step = 30
+        print(f"Start embed w on step: {start_embed_step}, total steps: {num_inference_steps}")
+
         if use_freeu:
             self.pipe.enable_freeu(s1=0.6, s2=0.4, b1=1.1, b2=1.2)
         else:
@@ -158,6 +164,8 @@ class WPlusAdapter:
             guidance_scale=guidance_scale,
             num_inference_steps=num_inference_steps,
             generator=generator,
+            start_embed_step=start_embed_step,
+            crossattn_scale=scale,
             **kwargs,
         ).images
      
