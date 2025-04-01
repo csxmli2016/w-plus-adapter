@@ -158,11 +158,13 @@ This project is built based on the excellent [IP-Adapter](https://github.com/ten
 ## Citation
 
 ```
-@article{li2023w-plus-adapter,
+@InProceedings{li2023w-plus-adapter,
 author = {Li, Xiaoming and Hou, Xinyu and Loy, Chen Change},
 title = {When StyleGAN Meets Stable Diffusion: a $\mathcal{W}_+$ Adapter for Personalized Image Generation},
-journal = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-year = {2024}
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month     = {June},
+year      = {2024},
+pages     = {2187-2196}
 }
 ```
 
