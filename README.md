@@ -121,10 +121,15 @@ Training Data for Stage 1:
 Training Data for Stage 2:
 - face image
 - e4e vector
-- background mask
 - in-the-wild image
 - in-the-wild face mask
 - in-the-wild caption
+
+
+Some training data in Stage 2:
+- ['captions_path'](https://github.com/csxmli2016/w-plus-adapter/releases/download/v1/captions_blip2.tar)
+- ['wild_face_path'](https://github.com/csxmli2016/w-plus-adapter/releases/download/v1/in-the-wild-min-512-face-mask.tar)
+- ['wild_path'](https://pan.baidu.com/s/15V8tT12GXcRxtlYBbI1ZBg?pwd=nbg9) (Baidu Disk, nearly 40 GB)
 
 ```
 ./train_wild.sh
